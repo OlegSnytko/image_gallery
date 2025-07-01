@@ -1,9 +1,11 @@
 export class ApiService {
     static async fetchImages(count = 12) {
         try {
-            const accessKey = window.CONFIG.UNSPLASH_ACCESS_KEY;
+            if (!window.CONFIG) {
+                throw new Error("CONFIG not loaded");
+            }
             const response = await fetch(
-                `${window.CONFIG.API_URL}?client_id=${accessKey}&count=${count}`
+                `${window.CONFIG.API_URL}?client_id=${window.CONFIG.UNSPLASH_ACCESS_KEY}&count=${count}`
             );
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             return await response.json();
