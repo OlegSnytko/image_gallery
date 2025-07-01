@@ -1,7 +1,7 @@
 export class ApiService {
     static async fetchImages(count = 12) {
         try {
-            const accessKey = window.CONFIG.UNSPLASH_ACCESS_KEY || process.env.UNSPLASH_ACCESS_KEY;
+            const accessKey = window.CONFIG.UNSPLASH_ACCESS_KEY;
             const response = await fetch(
                 `${window.CONFIG.API_URL}?client_id=${accessKey}&count=${count}`
             );
