@@ -24,7 +24,6 @@
     height: 100%;
     z-index: 1000;
     animation: fadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    /*animation-fill-mode: both;*/
 }
 
 @keyframes fadeIn {
@@ -35,17 +34,6 @@
     to { 
         opacity: 1; 
         transform: translateY(0); 
-    }
-}
-
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    to {
-        opacity: 0;
-        transform: translateY(20px);
     }
 }
 
@@ -115,7 +103,6 @@
 .close-btn {
     position: absolute;
     top: 12px;
-    /*right: 200px;*/
     right: 12px;
     cursor: pointer;
     background: none;
