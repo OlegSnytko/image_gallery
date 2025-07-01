@@ -21,7 +21,7 @@ export class Search {
 
         if (term.length < 2) {
             if (term.length === 0) {
-                this.gallery.displayImages(this.allImages);
+                this.gallery.updateDisplay();
             } else {
                 alert('Введите минимум 2 символа');
             }
@@ -82,7 +82,7 @@ export class Search {
     handleInput() {
         if (this.input.value === '') {
             this.gallery.grid.innerHTML = ''; 
-            this.gallery.displayImages(this.allImages);
+            this.gallery.updateDisplay();
         }
     }
 
