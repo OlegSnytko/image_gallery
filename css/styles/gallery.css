@@ -62,7 +62,7 @@
         width: 351px;
         height: 1552px;
         display: flex;
-        justify-content: center;
+        /*justify-content: center;*/
     }
 
     .gallery-grid {
