@@ -24,7 +24,7 @@ export class Gallery {
 
 
         updateDisplay() {
-            const imagesToShow = this.isMobile ? this.allImages.slice(0, 8) : this.allImages;
+            const imagesToShow = this.isMobile ? this.allImages.slice(0, 8) : this.allImages.slice(0, 12);
             this.currentImages = imagesToShow;
             
             

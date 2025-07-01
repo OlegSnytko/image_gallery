@@ -5,7 +5,7 @@ export class ApiService {
                 throw new Error("Configuration not loaded");
             }
             const response = await fetch(
-                `${window.CONFIG.API_URL}?client_id=${window.CONFIG.UNSPLASH_ACCESS_KEY}&count=${count}`
+                `${window.CONFIG.API_URL}?client_id=${window.CONFIG.UNSPLASH_ACCESS_KEY}&per_page=${count}`
             );
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             return await response.json();
