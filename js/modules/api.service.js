@@ -1,11 +1,8 @@
 export class ApiService {
     static async fetchImages(count = 12) {
         try {
-            if (!window.CONFIG) {
-                throw new Error("CONFIG not loaded");
-            }
-             if (!window.CONFIG.UNSPLASH_ACCESS_KEY) {
-                throw new Error("UNSPLASH_ACCESS_KEY is missing");
+            if (!window.CONFIG || !window.CONFIG.API_URL) {
+                throw new Error("Configuration not loaded");
             }
             const response = await fetch(
                 `${window.CONFIG.API_URL}?client_id=${window.CONFIG.UNSPLASH_ACCESS_KEY}&count=${count}`
