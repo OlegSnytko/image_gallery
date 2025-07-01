@@ -1,0 +1,220 @@
+.footer {
+    height: 374px;
+    background: var(--header-footer-gradient-light);
+    color: var(--white);
+    padding: 60px 0 30px;
+    font-family: var(--footer-body-font-style);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 1250.39px;
+    top: 1850px;
+    min-height: 215px;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 0 auto;
+}
+
+.footer-column-main {
+    flex: 1;
+    min-width: 128px;
+    max-width: 267px;
+    height: 215px;
+    text-align: left;
+}
+
+.footer-column {
+    /*flex: 0 0 150px;*/
+    padding-left: 15px;
+}
+
+.footer-logo {
+    margin-bottom: 15px;
+    height: 49px; 
+    width: 267px;
+}
+
+.footer-description {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: var(-footer-description-font-color);
+    margin-left: 5px;
+    letter-spacing: 0px;
+    max-width: 248px;
+}
+
+.footer-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: var(--footer-title-color);
+    letter-spacing: 3px;
+    font-weight: 400;
+}
+
+.footer-links {
+    list-style: none;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    letter-spacing: 0px;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    font-size: 20px;
+    color: var(--footer-description-font-color);
+    text-decoration: none;
+    transition: color 0.3s;
+    display: inline-block;
+}
+
+.footer-links .manage-link {
+    max-width: 80px;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: var(--footer-title-color);
+}
+
+
+.social-icons {
+   display: flex;
+    gap: 12px; 
+    align-items: center; 
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.social-icon {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: transform 0.3s;
+    text-decoration: none;
+} 
+
+.social-icon:not(.facebook-icon) {
+    background-color: var(--main-font);
+    border: var(--social-icon-border);
+}
+
+.facebook-icon {
+    background-color: var(--invert-facebook-icon-color);
+    filter: invert(1);
+}
+
+.social-icon {
+    object-fit: contain;
+}
+
+.twitter-icon img {
+    width: 16.76px;  
+    height: 13.55px; 
+}
+
+.facebook-icon img {
+    width: 13.27px;   
+    height: 25.55px; 
+}
+
+.instagram-icon img {
+    width: 17.61px;  
+    height: 17.61px;
+}
+
+.github-icon img {
+    width: 16.84px;  
+    height: 16.84px;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    height: 19px;
+    margin-top: 30px;
+    margin-left: 149px;
+}
+
+.copyright {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--footer-description-font-color);
+    font-family: var(--footer-body-font-style);
+    text-align: left;
+}
+
+
+@media (max-width: 768px) {
+    .footer {
+        height: 583px;
+        width: 100%; 
+        position: relative;
+        z-index: 2; 
+        margin-top: -5px; 
+        background: var(--header-footer-gradient-light);
+    }
+
+    .footer-container {
+        width: 100%;
+        max-width: 390px;
+        margin: 0 auto;
+        flex-direction: column;
+        padding-top: 0;
+        gap: 30px;
+    }
+
+    .footer-links:not(.footer-column-main){
+        display: none;
+    }
+
+    .footer-bottom {
+        margin: 0 0 0 0;
+        text-align: center;
+    }
+
+    .footer-column-main {
+        max-width: 100%;
+        height: auto;
+        margin: 0 0 0 33px;
+        text-align: left;
+    }
+
+    .footer-column {
+        margin: 0 0 0 23px;
+        height: 18px;
+        width: 135px;
+    }
+
+    .footer-bottom {
+        width: 344px;
+        height: 29px;
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--footer-bottom-color);
+    }
+
+    .copyright {
+        margin: 44px 0 0 0;
+        width: 344px;
+        height: 29px;
+        font-size: 16px;
+        display: flex;
+        text-align: center;
+        margin-left: 23px;
+        white-space: nowrap;
+    }
+}

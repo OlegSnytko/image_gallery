@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel = "stylesheet" href="css/main.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+</head>
+    <body>
+        <header class="header"> 
+           <div class="container">
+                <img src="assets/icons/logo-removebg-preview.png" class="logo" alt="logo">
+                <nav class="anchor">
+                    <div class="theme-switcher">
+                        <button class="theme-btn" id="theme-btn">
+                            <img src="assets/icons/paint-roller-bucket-icon.svg" alt="Theme">
+                        </button>
+                        <div class="theme-dropdown">
+                            <button data-theme="light">Light</button>
+                            <button data-theme="dark">Dark</button>
+                            <button data-theme="colorful">Colorful</button>
+                        </div>
+                    </div>
+
+                    <a href="#gallery">Gallery</a>
+                </nav>
+           </div>
+        </header>
+
+        <main>
+            <section class = "hero">
+                <div class="hero-content">
+                    <h1 class="search-title"> Let's Find Some <span class="word-images"> Images </span> Here! </h1>
+                </div>
+                <div class="search-wrapper">
+                <form class="search-container" id="search-form">
+                    <input 
+                    type="text"
+                    placeholder="Search High Resolution Images" 
+                    class="search-input"
+                    pattern="[A-Za-z0-9!$&*\-=^`|~#%'+/?_{}.,\s]+"
+                    id="search-input"
+                    maxlength="30" 
+                    minlength="2"
+                    required>
+                    <button type = "submit" class="search-button">
+                        <img class="magnifying-glass" src="assets/icons/search.svg" alt="Search">
+                    </button>
+                </form>
+                <div id="search-history" class="search-history"></div>
+                </div>
+            </section>
+
+            <section class = "gallery" id = "gallery">
+                <div class = "gallery-container">
+                    <div class = "gallery-grid" id ="gallery-grid"></div>
+                </div>
+            </section>
+        </main>
+
+        <div class="backdrop-blur" id="backdrop-blur"></div>
+        <div class="modal" id = "modal">
+            <div class="modal-container">
+                <div class="modal-image-container">
+                    <img class="modal-image" id="modal-image" src="" alt="modal-picture">
+                    <button class="close-btn" id="close-btn">
+                        <img src="assets/icons/close-btn.svg" alt="Close" class="close-icon">
+                    </button>
+                </div>
+
+                <div class="modal-nav-container">
+                    <button class="nav-btn prev-btn" id="prev-btn">
+                        <img src="assets/icons/arrow-left.svg" alt="Previous" class="nav-icon">
+                    </button>
+                    <button class="nav-btn next-btn"id="next-btn">
+                        <img src="assets/icons/arrow.svg" alt="Next" class="nav-icon">
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-column-main">
+                    <img src="assets/icons/logo-removebg-preview.png" class="footer-logo" alt="MODSEN Gallery Logo">
+                    <p class="footer-description">
+                        We have images that capture every mood and inspire every vision. 
+                        From breathtalking landscapes to vibrant portraits.
+                    </p>
+                    <div class="social-icons">
+                        <div class="social-icon twitter-icon">
+                            <img src="assets/icons/twitter-bird.svg" alt="twitter">
+                        </div>
+                        <div class="social-icon facebook-icon">
+                            <img src="assets/icons/facebook.svg" alt="facebook">
+                        </div>
+                        <div class="social-icon instagram-icon">
+                            <img src="assets/icons/instagram.svg" alt="instagram">
+                        </div>
+                        <div class="social-icon github-icon">
+                            <img src="assets/icons/github.svg" alt="github">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-title">company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Works</a></li>
+                        <li><a href="#">Career</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-title">help</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Customer Support</a></li>
+                        <li><a href="#">Delivery Details</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-title">faq</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Account</a></li>
+                        <li><a href="#" class="manage-link">Manage Deliveries</a></li>
+                        <li><a href="#">Orders</a></li>
+                        <li><a href="#">Payments</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-title">resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Free eBooks</a></li>
+                        <li><a href="#">Development Tutorial</a></li>
+                        <li><a href="#">How to - Blog</a></li>
+                        <li><a href="#">Youtube Playlist</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">Modsen gallery © 2000-2025, All rights reserved</p>
+            </div>
+        </footer>
+
+        <script src="js/config.js"></script>
+        <script type="module" src="js/app.js"></script>
+    </body>
+</html>
